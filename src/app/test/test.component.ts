@@ -15,4 +15,7 @@ export class TestComponent implements OnInit {
   welcomeuser() {
     return 'welcome';
   }
+  eventbinding(val) {
+    console.log(' welcome to ngrok' + ' ' + val);
+  }
 }

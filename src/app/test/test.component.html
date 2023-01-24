@@ -7,4 +7,6 @@
 <div [class.danger]="helu">
   welcoming user using functions too ///interpolation -->
   {{ welcomeuser() }}
+<input type ="text" #myinput >
+  <Button class="og" (click)="eventbinding(myinput.value)"> click me</Button>
 </div>
