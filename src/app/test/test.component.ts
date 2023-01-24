@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
   public name = 'this anme from testcomponent';
+  public gg = '';
+
   helu = true; // parameter for class binding
   constructor() {}
 
