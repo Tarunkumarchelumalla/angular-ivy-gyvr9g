@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-
+import { EmployeeService } from '../employee.service';
 @Component({
   selector: 'app-test',
   templateUrl: './test.component.html',
@@ -15,16 +15,18 @@ export class TestComponent implements OnInit {
   show = false;
   x = ['1', '2', '3', '4']; // this array can be used for list rendering
   helu = true; // parameter for class binding
+  public Employdata = [];
+  constructor(private _ed: EmployeeService) {}
 
-  constructor() {}
-
-  ngOnInit() {}
+  ngOnInit() {
+    this._ed.getEmployees().subscribe((data)=>this.Employdata=data);
+  }
 
   welcomeuser() {
     return 'welcome';
   }
   eventbinding(val) {
-    console.log(' welcome to ngrok' + ' ' + val);
+    console.log(' welcome to ' + ' ' + val);
     this.show = !this.show;
   }
   fireevent() {
