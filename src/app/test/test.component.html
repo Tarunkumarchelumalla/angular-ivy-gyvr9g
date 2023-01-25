@@ -8,6 +8,31 @@
   welcoming user using functions too ///interpolation -->
   {{ welcomeuser() }}
   <input type="text" #myinput />
-  <input type="text" [(ngModel)]="gg" />{{ gg }}
+  <input type="text" [(ngModel)]="gg" placeholder="[(ngModel)]" />{{ gg }}
   <Button class="og" (click)="eventbinding(myinput)"> click me</Button>
 </div>
+<!-- // nfIf is dynamically controlled my click me function using boolean values -->
+<h1 *ngIf="show; else ok12">its main block that executing .......</h1>
+<!-- ng-template tag using for else conditon for above ngIf -->
+<ng-template #ok12>
+  <h1>helooooooooooooo its else block that executing......</h1>
+</ng-template>
+<!-- You can use ngIf in an empty div for showing two ng template blocks hide for certain conditions  -->
+
+<!--  ng-switch case example -->
+<div [ngSwitch]="color">
+  <div *ngSwitchCase="'red'">ngSwitchCase example</div>
+  <div *ngSwitchDefault>ngSwitchDefault case</div>
+</div>
+<!-- ngfor   for list rendering -->
+<div *ngFor="let i of x">
+  <p>
+    {{ i }}
+  </p>
+</div>
+<!-- comunication from parent and child  -->
+<div>
+  <h1>{{ msgofparent }}</h1>
+</div>
+<!--  transefering data to parent form child on onclick event -->
+<Button (click)="fireevent()">send data to parent</Button>

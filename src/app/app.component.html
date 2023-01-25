@@ -1,3 +1,13 @@
 <p>Start editing to see some magic happen :)</p>
-<app-test></app-test>
+{{ masg }}
+
 <h6>{{ name }}</h6>
+
+<br />
+<br />
+
+<br />
+<br />
+<hr />
+
+<app-test (childevent)="masg = $event" [parentdata]="msg"></app-test>

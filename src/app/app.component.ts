@@ -7,4 +7,6 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent {
   public name = 'this name from app component';
+  public msg = 'from parent to child';
+  public masg = '';
 }
